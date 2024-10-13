@@ -17,7 +17,7 @@ generation_config = {
 model = genai.GenerativeModel("gemini-pro")
 
 # Define path to PDF year-end reports
-path = r"/Users/eldridgeng/mario-1/Data/YER"
+path = "Data/YER"
 
 # Function to extract text from PDFs
 def extract_text_from_pdf(pdf_path):
@@ -59,6 +59,14 @@ employees = {
 
 # Display employee images and buttons in the sidebar
 selected_employee = st.sidebar.selectbox("Choose an Employee", list(employees.keys()))
+
+# Display the employee image if it exists
+if selected_employee:
+    image_path = employees[selected_employee]
+    if os.path.exists(image_path):
+        st.sidebar.image(image_path, caption=selected_employee, use_column_width=True)
+    else:
+        st.sidebar.error(f"Image not found for {selected_employee}.")
 
 # Main Section
 if selected_employee:

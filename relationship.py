@@ -17,12 +17,7 @@ generation_config = {
 model = genai.GenerativeModel("gemini-pro")
 
 # Define path to PDF year-end reports
-path = r"/Users/malla/Desktop/Mario"
-
-# Create output folder for analysis
-output_folder = rf"{path}/Year-End Analysis"
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
+path = r"./Data/YER"
 
 # Function to extract text from PDFs
 def extract_text_from_pdf(pdf_path):

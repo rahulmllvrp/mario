@@ -2,7 +2,7 @@ import os
 import google.generativeai as genai
 import textwrap
 
-path = r"C:\Users\leleq\Code Sprint\Data" ## Change accordingly##
+path = r"./Data/PD"
 
 #Set the API_KEY environment variable
 #API key from gemini account
