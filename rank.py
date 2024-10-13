@@ -17,7 +17,7 @@ generation_config = {
 model = genai.GenerativeModel("gemini-pro")
 
 # Define path to PDF year-end reports
-path = r"./Data/YER"
+path = "Data/YER"
 
 # Function to extract text from PDFs
 def extract_text_from_pdf(pdf_path):
